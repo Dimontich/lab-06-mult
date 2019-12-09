@@ -1,7 +1,6 @@
 os: linux
 sudo: required
-language:
-- minimal
+language: "minimal"
 services:
 - docker
 
@@ -15,14 +14,7 @@ jobs:
     - docker run -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/tests.sh
   - name: "quality"
     script:
-    - ./scripts/genenv.sh
-    - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/coverage.sh
-    # The bot has gone...
-    # - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/duplication.sh
+    - docker run --env-file .env -v `pwd`:`pwd` -w `pwd` -t rusdevops/bootstrap-cpp scripts/genenv.sh
 
 notifications:
     email: false
-
-branches:
-  except:
-  - master

@@ -15,8 +15,10 @@ void HashFinder()
         std::string hash = picosha2::hash256_hex_string(random_string);
         std::string hash_end = hash.substr(hash.size() - needed_end.size());
         if (hash_end == needed_end)
-            BOOST_LOG_TRIVIAL(info) << " Is Correct: +  Random_String: '" << random_string << "' Hash: '" << hash<<"'";
+            BOOST_LOG_TRIVIAL(info) << " Is Correct: +  Random_String: '"
+            << random_string << "' Hash: '" << hash<<"'";
         else
-            BOOST_LOG_TRIVIAL(info) << " Is Correct: -  Random_String: '" << random_string << "' Hash: '" << hash<<"'";
+            BOOST_LOG_TRIVIAL(info) << " Is Correct: -  Random_String: '"
+            << random_string << "' Hash: '" << hash<<"'";
     } 
 }

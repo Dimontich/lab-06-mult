@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/CERZAR/lab-06-multithreads.svg?branch=master)](https://travis-ci.org/CERZAR/lab-06-multithreads)
 # Лабораторная работа №6
 
 ## Задание
