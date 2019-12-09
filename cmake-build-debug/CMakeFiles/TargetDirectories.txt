@@ -1,0 +1,5 @@
+/home/cezar/CERZAR/workspace/labs/lab-06-multithreads/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/cezar/CERZAR/workspace/labs/lab-06-multithreads/cmake-build-debug/CMakeFiles/test.dir
+/home/cezar/CERZAR/workspace/labs/lab-06-multithreads/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/cezar/CERZAR/workspace/labs/lab-06-multithreads/cmake-build-debug/CMakeFiles/Multithreads.dir
+/home/cezar/CERZAR/workspace/labs/lab-06-multithreads/cmake-build-debug/CMakeFiles/tests.dir
