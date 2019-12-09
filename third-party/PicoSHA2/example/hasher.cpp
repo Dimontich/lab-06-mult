@@ -11,11 +11,10 @@ void CalcAndOutput(const std::string& src){
 
 int main(int argc, char* argv[])
 {
- if(argc == 1){
+ if (argc == 1){
  CalcAndOutput("");
- }
- else{
- for(int i = 1; i < argc; ++i){
+ }else{
+ for (int i = 1; i < argc; ++i){
  CalcAndOutput(argv[i]);
  }
  }

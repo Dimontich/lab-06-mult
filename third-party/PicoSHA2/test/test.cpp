@@ -53,15 +53,15 @@ void input_hex(std::istream& is, OutIter first, OutIter last){
         is >> c;
         if ('0' <= c && c <= '9'){
             buffer.push_back(c-'0');
-        }else
-        if ('a' <= c && c <= 'f'){
+        }else if ('a' <= c && c <= 'f'){
             buffer.push_back(c-'a'+10);
         }
     }
 }
 
 template<typename OutIter>
-void hex_string_to_bytes(const std::string& hex_str, OutIter first, OutIter last){
+void hex_string_to_bytes(const std::string& hex_str,
+        OutIter first, OutIter last){
     assert(hex_str.length() >= 2*std::distance(first, last));
     std::istringstream iss(hex_str);
     input_hex(iss, first, last);
@@ -228,8 +228,8 @@ void test(){
                              std::istreambuf_iterator<char>());
         std::size_t i = 0;
         std::size_t block_size = file_str.length()/10;
-        for(i = 0; i+block_size <= file_str.length(); i+=block_size){
-            hasher.process(file_str.begin()+i, file_str.begin()+i+block_size);
+        for (i = 0; i+block_size <= file_str.length(); i+=block_size){
+ hasher.process(file_str.begin()+i, file_str.begin()+i+block_size);
         }
         hasher.process(file_str.begin()+i, file_str.end());
         hasher.finish();
@@ -240,7 +240,6 @@ void test(){
         picosha2::hash256_hex_string(file_str.begin(),
                 file_str.end(), hex_string);
         PICOSHA2_CHECK_EQUAL(one_by_one_hex_string, hex_string);
-
     }
     {
         std::string one_by_one_hex_string; {
@@ -250,7 +249,7 @@ void test(){
                                  std::istreambuf_iterator<char>());
             std::size_t i = 0;
             std::size_t block_size = file_str.length()/10;
-            for(i = 0; i+block_size <= file_str.length(); i+=block_size){
+            for (i = 0; i+block_size <= file_str.length(); i+=block_size){
                 hasher.process(file_str.begin()+i,
                         file_str.begin()+i+block_size);
             }
