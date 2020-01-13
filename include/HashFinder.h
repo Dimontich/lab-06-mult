@@ -18,7 +18,7 @@ void HashFinder()
             BOOST_LOG_TRIVIAL(info) << " Is Correct: +  Random_String: '"
             << random_string << "' Hash: '" << hash<<"'";
         else
-            BOOST_LOG_TRIVIAL(info) << " Is Correct: -  Random_String: '"
+            BOOST_LOG_TRIVIAL(trace) << " Is Correct: -  Random_String: '"
             << random_string << "' Hash: '" << hash<<"'";
     } 
 }
