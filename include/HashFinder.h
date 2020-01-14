@@ -1,4 +1,4 @@
-// Copyright 2019 CERZAR
+// Copyright 2019 Dimontich 
 
 #include "picosha2.h"
 #include <boost/log/trivial.hpp>

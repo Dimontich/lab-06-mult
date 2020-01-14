@@ -5,5 +5,6 @@
     <mapping directory="$PROJECT_DIR$/third-party/PicoSHA2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tools/gate" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tools/polly" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tools/polly/docs/rtfd-css" vcs="Git" />
   </component>
 </project>

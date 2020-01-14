@@ -1,4 +1,4 @@
-// Copyright 2019 CERZAR
+// Copyright 2019 Dimontich
 
 #include <boost/log/utility/setup.hpp>
 #include <thread>
